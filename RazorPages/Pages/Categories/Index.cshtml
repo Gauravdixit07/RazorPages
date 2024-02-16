@@ -1,0 +1,37 @@
+﻿@page
+@model RazorPages.Pages.Categories.IndexModel
+@{
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1> List Category</h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Category Id</th>
+                        <th>  Category Name </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model.Categories)
+                    {
+                        <tr>
+                            <td>
+                                @obj.Id
+                            </td>
+                            <td>@obj.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
